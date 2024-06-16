@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадрат меняющий цвет</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            transition: background-color 1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="square"></div>
+
+    <script>
+        let isBlack = true;
+
+        setInterval(() => {
+            const square = document.getElementById('square');
+            if (isBlack) {
+                square.style.backgroundColor = 'white';
+            } else {
+                square.style.backgroundColor = 'black';
+            }
+            isBlack = !isBlack;
+        }, 1000);
+    </script>
+</body>
+</html>
